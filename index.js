@@ -9,8 +9,21 @@ tweetBtn.addEventListener('click', function(){
 })
 
  document.addEventListener('click', function(e){
-    console.log(e.target.dataset.like)
+    if(e.target.dataset.like){
+        handleLikeClick(e.target.dataset.like)
+
+    }
  })
+
+ function handleLikeClick(tweetId){
+    
+    const targetTweetObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+
+    console.log(targetTweetObj.likes++)
+
+ }
 
 function getFeedHtml(){
     
