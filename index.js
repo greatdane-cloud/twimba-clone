@@ -19,10 +19,10 @@ tweetBtn.addEventListener('click', function(){
     
     const targetTweetObj = tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId
+       
     })[0]
-
-    console.log(targetTweetObj.likes++)
-
+    targetTweetObj.likes++
+    render()
  }
 
 function getFeedHtml(){
