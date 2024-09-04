@@ -1,10 +1,9 @@
 import {tweetsData} from './data.js'
-
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 
-const tweetInput = document.getElementById('tweet-input')
-const feedDiv = document.getElementById('feed')
+
+
 
 // tweetBtn.addEventListener('click', function(){
 //     console.log(tweetInput.value)
@@ -68,6 +67,10 @@ const feedDiv = document.getElementById('feed')
  }
 
  function handleTweetBtnClick(){
+
+    const tweetInput = document.getElementById('tweet-input')
+
+    if(tweetInput.value){
    tweetsData.unshift({
         handle: `@Scrimba`,
         profilePic: `images/scrimbalogo.png`,
@@ -80,6 +83,8 @@ const feedDiv = document.getElementById('feed')
         uuid: uuidv4(),
     })
     render()
+    tweetInput.value = ''
+    }
  }
 
 function getFeedHtml(){
@@ -162,6 +167,7 @@ function getFeedHtml(){
     }
 
     function render (){
-             feedDiv.innerHTML = getFeedHtml()
+
+        document.getElementById('feed').innerHTML = getFeedHtml()
     }
  render()
