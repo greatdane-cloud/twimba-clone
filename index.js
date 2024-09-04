@@ -79,6 +79,7 @@ const feedDiv = document.getElementById('feed')
         isRetweeted: false,
         uuid: uuidv4(),
     })
+    render()
  }
 
 function getFeedHtml(){
