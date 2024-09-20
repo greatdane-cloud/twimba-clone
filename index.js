@@ -1,4 +1,4 @@
-import {tweetsData} from './data'
+import {tweetsData} from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 
@@ -73,7 +73,7 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
     if(tweetInput.value){
    tweetsData.unshift({
         handle: `@Scrimba`,
-        profilePic: `public/scrimbalogo.png`,
+        profilePic: `/public/scrimbalogo.png`,
         likes: 0,
         retweets: 0,
         tweetText: tweetInput.value,
