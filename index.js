@@ -75,7 +75,7 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
     if(tweetInput.value){
    tweetsData.unshift({
         handle: `@Scrimba`,
-        profilePic: `dist/asets/scrimbalogo.png`,
+        profilePic: `dist/assets/scrimbalogo.png`,
         likes: 0,
         retweets: 0,
         tweetText: tweetInput.value,
