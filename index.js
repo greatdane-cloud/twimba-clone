@@ -170,6 +170,6 @@ function getFeedHtml(){
 
     function render(){
 
-        document.getElementById('feed').innerHTML = getFeedHtml()
+        document.getElementById('feed').innerHTML += getFeedHtml()
     }
  render()
