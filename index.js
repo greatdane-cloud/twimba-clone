@@ -75,7 +75,7 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
     if(tweetInput.value){
    tweetsData.unshift({
         handle: `@Scrimba`,
-        profilePic: `public/scrimbalogo.png`,
+        profilePic: `dist/asets/scrimbalogo.png`,
         likes: 0,
         retweets: 0,
         tweetText: tweetInput.value,
@@ -168,7 +168,7 @@ function getFeedHtml(){
        return feedHtml 
     }
 
-    function render (){
+    function render(){
 
         document.getElementById('feed').innerHTML = getFeedHtml()
     }
